@@ -8,6 +8,12 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+using namespace __gnu_pbds;
+ 
+template <typename T>
+using o_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+template <typename T>
+using o_multiset = tree<T, null_type, less_equal<T>, rb_tree_tag, tree_order_statistics_node_update>; 
 
 #define rep(i, j, n) for (int i = j; i < n; i++)
 #define re(i, n) rep(i, 0, n)
