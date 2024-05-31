@@ -69,59 +69,25 @@ void _print(map<T, V> v);
 template <class T>
 void _print(multiset<T> v);
 template <class T, class V>
-void _print(pair<T, V> p)
-{
-    cerr << "{";
-    _print(p.ff);
-    cerr << ",";
-    _print(p.ss);
-    cerr << "}";
-}
+void _print(pair<T, V> p){cerr << "{";_print(p.ff);cerr << ",";_print(p.ss);cerr << "}";}
 template <class T>
-void _print(vector<T> v)
-{
-    cerr << "[ ";
-    for (T i : v)
-    {
-        _print(i);
-        cerr << " ";
-    }
-    cerr << "]";
-}
+void _print(vector<T> v){cerr << "[ ";for (T i : v){_print(i);cerr << " ";}cerr << "]";}
 template <class T>
-void _print(set<T> v)
-{
-    cerr << "[ ";
-    for (T i : v)
-    {
-        _print(i);
-        cerr << " ";
-    }
-    cerr << "]";
-}
+void _print(set<T> v){cerr << "[ ";for (T i : v){_print(i);cerr << " ";}cerr << "]";}
 template <class T>
-void _print(multiset<T> v)
-{
-    cerr << "[ ";
-    for (T i : v)
-    {
-        _print(i);
-        cerr << " ";
-    }
-    cerr << "]";
-}
+void _print(multiset<T> v){cerr << "[ ";for (T i : v){_print(i);cerr << " ";}cerr << "]";}
 template <class T, class V>
-void _print(map<T, V> v)
-{
-    cerr << "[ ";
-    for (auto i : v)
-    {
-        _print(i);
-        cerr << " ";
-    }
-    cerr << "]";
-}
+void _print(map<T, V> v){cerr << "[ ";for (auto i : v){_print(i);cerr << " ";}cerr << "]";}
 //*******************************************************************************************************************************************//
+ll c2(int n)
+{
+    return 1LL * n * (n - 1) / 2;
+}
+ll c2mod(int n, int m)
+{
+    n %= m;
+    return 1LL * n * (n - 1) / 2 % m;
+}
 /*********************************************************
  *                                                       *
  *   "It is not important to be better than someone      *
