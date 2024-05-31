@@ -1,11 +1,3 @@
-/*********************************************************
- *                                                       *
- *   "It is not important to be better than someone      *
- *   else, but to be better than you were yesterday.”    *
- *                   — Master Oogway, Kung Fu Panda      *
- *                                                       *
- *********************************************************/
-
 #include <bits/stdc++.h>
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
@@ -130,6 +122,14 @@ void _print(map<T, V> v)
     cerr << "]";
 }
 //*******************************************************************************************************************************************//
+/*********************************************************
+ *                                                       *
+ *   "It is not important to be better than someone      *
+ *   else, but to be better than you were yesterday.”    *
+ *                   — Master Oogway, Kung Fu Panda      *
+ *                                                       *
+ *********************************************************/
+
 
 int main()
 {
