@@ -41,6 +41,12 @@ typedef pair<ll, ll> pll;
 typedef pair<char, char> pc;
 
 //*******************************************************************************************************************************************//
+void fastio(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    return;
+}
+//*******************************************************************************************************************************************//
 #ifndef ONLINE_JUDGE
 #define debug(x)       \
     cerr << #x << " "; \
@@ -99,6 +105,7 @@ ll c2mod(int n, int m)
 
 int main()
 {
+    fastio();
     int tc;
     cin >> tc;
     while (tc--)
