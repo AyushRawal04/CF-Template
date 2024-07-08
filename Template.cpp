@@ -20,8 +20,8 @@ typedef long double lld;
 const int MOD = 1000000007;
 const int maxi = INT_MAX;
 const int mini = INT_MIN;
-const ll maxll = LONG_LONG_MAX;
-const ll minll = LONG_LONG_MIN;
+const ll maxll = LLONG_MAX;
+const ll minll = LLONG_MIN;
 #define sq(x) ((x) * (x))
 // vectors
 #define pb(e) push_back(e)
