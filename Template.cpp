@@ -174,12 +174,30 @@ struct Update1 {
 //*******************************************************************************************************************************************//
 ll c2(int n)
 {
-    return 1LL * n * (n - 1) / 2;
+	return 1LL * n * (n - 1) / 2;
 }
 ll c2mod(int n, int m)
 {
-    n %= m;
-    return 1LL * n * (n - 1) / 2 % m;
+	n %= m;
+	return 1LL * n * (n - 1) / 2 % m;
+}
+vi dig(int n){
+	int y=n;
+	vi res;
+	while(y){
+		res.push_back(y%10);
+		y/=10;
+	}
+	return res;
+}
+vi digll(ll n){
+	ll y=n;
+	vi res;
+	while(y){
+		res.push_back(y%10);
+		y/=10;
+	}
+	return res;
 }
 /*********************************************************
  *                                                       *
@@ -192,12 +210,12 @@ ll c2mod(int n, int m)
 
 int main()
 {
-    fastio();
-    int tc;
-    cin >> tc;
-    while (tc--)
-    {
-    }
+fastio();
+	int tc;
+	cin >> tc;
+	while (tc--)
+	{
+	}
 
-    return 0;
+    	return 0;
 }
