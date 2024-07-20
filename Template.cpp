@@ -177,12 +177,12 @@ struct Update1 {
 const int nDSU = 2 * 1e5;
 
 // parent, rank
-int p[nDSU], r[nDSU];
+int pDSU[nDSU], rDSU[nDSU];
 
 // gets the leader for you
 int getDSU(int a)
 {
-    return (p[a] == a ? a : get(p[a]));
+    return (pDSU[a] == a ? a : get(pDSU[a]));
 }
 
 void uniteDSU(int a, int b)
@@ -192,14 +192,14 @@ void uniteDSU(int a, int b)
     b = get(b);
 
     // update the rank
-    if (r[a] == r[b])
-        r[a]++;
+    if (rDSU[a] == rDSU[b])
+        rDSU[a]++;
 
     // update the parent
-    if (r[a] > r[b])
-        p[b] = a;
+    if (rDSU[a] > rDSU[b])
+        pDSU[b] = a;
     else
-        p[a] = b;
+        pDSU[a] = b;
 }
 //*******************************************************************************************************************************************//
 ll c2(int n)
