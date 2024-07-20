@@ -171,6 +171,36 @@ struct Update1 {
 		a.val = val; // may change
 	}
 };
+
+
+//*******************************************************************************************************************************************//
+const int nDSU = 2 * 1e5;
+
+// parent, rank
+int p[nDSU], r[nDSU];
+
+// gets the leader for you
+int getDSU(int a)
+{
+    return (p[a] == a ? a : get(p[a]));
+}
+
+void uniteDSU(int a, int b)
+{
+    // find the leader
+    a = get(a);
+    b = get(b);
+
+    // update the rank
+    if (r[a] == r[b])
+        r[a]++;
+
+    // update the parent
+    if (r[a] > r[b])
+        p[b] = a;
+    else
+        p[a] = b;
+}
 //*******************************************************************************************************************************************//
 ll c2(int n)
 {
