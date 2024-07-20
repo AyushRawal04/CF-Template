@@ -174,10 +174,15 @@ struct Update1 {
 
 
 //*******************************************************************************************************************************************//
-const int nDSU = 2 * 1e5;
-
 // parent, rank
-int pDSU[nDSU], rDSU[nDSU];
+vector<int> pDSU, rDSU;
+
+//initialise the parent and rank array
+void intialise(int n){
+	pDSU.resize(n);
+	rDSU.resize(n);
+	iota(pDSU.begin(), pDSU.end(), 0);
+}
 
 // gets the leader for you
 int getDSU(int a)
