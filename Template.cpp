@@ -187,7 +187,8 @@ void intialise(int n){
 // gets the leader for you
 int getDSU(int a)
 {
-    return (pDSU[a] == a ? a : get(pDSU[a]));
+	//without path compression
+    return (pDSU[a] == a ? a : getDSU(pDSU[a]));
 }
 
 void uniteDSU(int a, int b)
