@@ -194,8 +194,8 @@ int getDSU(int a)
 void uniteDSU(int a, int b)
 {
     // find the leader
-    a = get(a);
-    b = get(b);
+    a = getDSU(a);
+    b = getDSU(b);
 
     // update the rank
     if (rDSU[a] == rDSU[b])
