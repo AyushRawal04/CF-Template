@@ -208,6 +208,24 @@ void uniteDSU(int a, int b)
         pDSU[a] = b;
 }
 //*******************************************************************************************************************************************//
+
+/*
+One easy way to normalize an array is to first create a copy of it. 
+Let 'v' be the array to be normalized and 'aux' its duplicate.
+Then, sort the copy and erase the dublicates.
+Thus, 'aux' contains all the distinct elements in 'v'.
+Now, we simply have to find for each element in 'v' its position in 'aux'. 
+This can be easily done using binary search or the STL-provided lower_bound function.
+*/
+ 
+void normalize(std::vector<int> &v) {
+  	vector<int> aux = v;
+  	sort(aux.begin(), aux.end());
+  	aux.erase(unique(aux.begin(), aux.end()), aux.end());
+  	for(int i = 0; i < v.size(); i++)
+    		v[i] = lower_bound(aux.begin(), aux.end(), v[i]) - aux.begin() + 1;
+}
+
 ll c2(int n)
 {
 	return 1LL * n * (n - 1) / 2;
