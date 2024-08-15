@@ -264,6 +264,8 @@ vi digll(ll n){
 
 int main()
 {
+//freopen("Input File", "r", stdin);
+//freopen("Output File", "w", stdout);
 fastio();
 	int tc;
 	cin >> tc;
