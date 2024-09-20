@@ -218,11 +218,11 @@ Now, we simply have to find for each element in 'v' its position in 'aux'.
 This can be easily done using binary search or the STL-provided lower_bound function.
 */
  
-void normalize(std::vector<int> &v) {
+void normalize(vector<int> &v) {
   	vector<int> aux = v;
   	sort(aux.begin(), aux.end());
   	aux.erase(unique(aux.begin(), aux.end()), aux.end());
-  	for(int i = 0; i < v.size(); i++)
+  	for(int i = 0; i < (int)v.size(); i++)
     		v[i] = lower_bound(aux.begin(), aux.end(), v[i]) - aux.begin() + 1;
 }
 
