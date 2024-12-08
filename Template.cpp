@@ -178,7 +178,7 @@ struct Update1 {
 vector<int> pDSU, rDSU;
 
 //initialise the parent and rank array
-void intialise(int n){
+void initialiseDSU(int n){
 	pDSU.resize(n);
 	rDSU.resize(n);
 	iota(pDSU.begin(), pDSU.end(), 0);
