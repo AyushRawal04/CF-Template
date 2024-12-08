@@ -282,7 +282,9 @@ vi digll(ll n){
  *                   — Master Oogway, Kung Fu Panda      *
  *                                                       *
  *********************************************************/
+void solve(){
 
+}
 
 int main()
 {
@@ -293,6 +295,7 @@ fastio();
 	cin >> tc;
 	while (tc--)
 	{
+		solve();
 	}
 
     	return 0;
