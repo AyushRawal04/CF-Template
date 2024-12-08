@@ -209,21 +209,43 @@ void uniteDSU(int a, int b)
 }
 //*******************************************************************************************************************************************//
 
-/*
-One easy way to normalize an array is to first create a copy of it. 
-Let 'v' be the array to be normalized and 'aux' its duplicate.
-Then, sort the copy and erase the dublicates.
-Thus, 'aux' contains all the distinct elements in 'v'.
-Now, we simply have to find for each element in 'v' its position in 'aux'. 
-This can be easily done using binary search or the STL-provided lower_bound function.
-*/
- 
+//One easy way to normalize an array is to first create a copy of it. 
+//Let 'v' be the array to be normalized and 'aux' its duplicate.
+//Then, sort the copy and erase the dublicates.
+//Thus, 'aux' contains all the distinct elements in 'v'.
+//Now, we simply have to find for each element in 'v' its position in 'aux'. 
+//This can be easily done using binary search or the STL-provided lower_bound function.
 void normalize(vector<int> &v) {
   	vector<int> aux = v;
   	sort(aux.begin(), aux.end());
   	aux.erase(unique(aux.begin(), aux.end()), aux.end());
   	for(int i = 0; i < (int)v.size(); i++)
     		v[i] = lower_bound(aux.begin(), aux.end(), v[i]) - aux.begin() + 1;
+}
+
+//Linear sieve calculates prime and spf
+//Try most times only upto 1e7
+//Prime Check spf[i]==i
+vector<int> spf;
+vector<int> pr;
+
+void initialiseSieve(int n){
+        spf.resize(n+1);
+}
+void Linearsieve(){
+        int n=sz(spf);
+        for (int i=2; i<=n; ++i) {
+        if (spf[i]==0){
+                spf[i]=i;
+                pr.push_back(i);
+        }
+                for(int j=0; i*pr[j]<=n; ++j){
+                        spf[i*pr[j]]=pr[j];
+                        if (pr[j]==spf[i]){
+                                break;
+                        }
+                }
+        }
 }
 
 ll c2(int n)
