@@ -32,6 +32,8 @@ const ll minll = LLONG_MIN;
 #define all(a) (a).begin(), (a).end()
 typedef vector<int> vi;
 typedef vector<ll> vll;
+typedef vector<vector<int>> vvi;
+typedef vector<vector<long long>> vvll;
 // pairs
 #define mp(a, b) make_pair(a, b)
 #define ff first
