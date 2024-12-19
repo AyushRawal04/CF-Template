@@ -233,7 +233,7 @@ void initialiseSieve(int n){
         spf.resize(n+1);
 }
 void Linearsieve(){
-        int n=sz(spf);
+        int n=sz(spf)-1;
         for (int i=2; i<=n; ++i) {
         if (spf[i]==0){
                 spf[i]=i;
