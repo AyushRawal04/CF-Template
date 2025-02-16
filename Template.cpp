@@ -368,13 +368,6 @@ void uniteDSU(int a, int b)
         pDSU[a] = b;
 }
 //*******************************************************************************************************************************************//
-
-//One easy way to normalize an array is to first create a copy of it. 
-//Let 'v' be the array to be normalized and 'aux' its duplicate.
-//Then, sort the copy and erase the dublicates.
-//Thus, 'aux' contains all the distinct elements in 'v'.
-//Now, we simply have to find for each element in 'v' its position in 'aux'. 
-//This can be easily done using binary search or the STL-provided lower_bound function.
 void normalize(vector<int> &v) {
   	vector<int> aux = v;
   	sort(aux.begin(), aux.end());
@@ -383,6 +376,7 @@ void normalize(vector<int> &v) {
     		v[i] = lower_bound(aux.begin(), aux.end(), v[i]) - aux.begin() + 1;
 }
 
+//*******************************************************************************************************************************************//
 //Linear sieve calculates prime and spf
 //Try most times only upto 1e7
 //Prime Check spf[i]==i
@@ -407,34 +401,7 @@ void Linearsieve(){
                 }
         }
 }
-
-ll c2(int n)
-{
-	return 1LL * n * (n - 1) / 2;
-}
-ll c2mod(int n, int m)
-{
-	n %= m;
-	return 1LL * n * (n - 1) / 2 % m;
-}
-vi dig(int n){
-	int y=n;
-	vi res;
-	while(y){
-		res.push_back(y%10);
-		y/=10;
-	}
-	return res;
-}
-vi digll(ll n){
-	ll y=n;
-	vi res;
-	while(y){
-		res.push_back(y%10);
-		y/=10;
-	}
-	return res;
-}
+//*******************************************************************************************************************************************//
 /*********************************************************
  *                                                       *
  *   "It is not important to be better than someone      *
